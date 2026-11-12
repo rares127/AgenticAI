@@ -1,0 +1,25 @@
+{
+	"id": "chatcmpl-465",
+	"object": "chat.completion",
+	"created": 1790919034,
+	"model": "qwen2.5:1.5b",
+	"system_fingerprint": "fp_ollama",
+	"choices": [
+		{
+			"index": 0,
+			"message": {
+				"role": "assistant",
+				"content": "The command to list all TCP listening sockets is `netstat` or `ss` with the `-t` option. Here's how you can use it:\n\n### Using `netstat`\n```bash\nnetstat -t\n```\n\n### Using `ss`\n```bash\nss -t\n```\n\n### Explanation\n- `netstat`: A command-line utility that displays network connections, routing tables, interface statistics, and multicast memberships.\n- `-t`: Specifies that the output should be in TCP format.\n\n### What `netstat` Lists\n- **Connections**: Shows active TCP connections.\n- **Routes**: Displays routing tables.\n- **Interfaces**: Lists network interfaces.\n- **Multicast**: Shows multicast memberships.\n- **Statistics**: Displays statistics for each network interface.\n\n### What `ss` Lists\n- **TCP**: Lists all TCP connections and listening sockets.\n- **UDP**: Lists all UDP connections and listening sockets.\n- **All**: Lists all connections, routes, interfaces, and statistics.\n\n### Example Output\n```bash\ntcp        0      0 0.0.0.0:22         0.0.0.0:*       LISTEN\ntcp        0      0 127.0.0.1:8080    0.0.0.0:*       LISTEN\ntcp        0      0 0.0.0.0:80         0.0.0.0:*       LISTEN\ntcp        0      0 0.0.0.0:443        0.0.0.0:*       LISTEN\n```\n\nThis output shows that there are listening sockets on ports 22, 8080, 80, and 443."
+			},
+			"finish_reason": "stop"
+		}
+	],
+	"usage": {
+		"prompt_tokens": 29,
+		"prompt_tokens_details": {
+			"cached_tokens": 0
+		},
+		"completion_tokens": 375,
+		"total_tokens": 404
+	}
+}
